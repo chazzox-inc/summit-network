@@ -1,9 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-    <div class="flex h-screen items-center justify-center">
-        <h1>test</h1>
+    <div class="flex h-screen flex-col">
+        <Navbar />
+        <div class="flex flex-1 items-center justify-center">
+            <h1>this is where the content goes :)</h1>
+        </div>
     </div>
 </Layout>
