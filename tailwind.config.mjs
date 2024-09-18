@@ -4,7 +4,8 @@ export default {
     theme: {
         extend: {
             colors: {
-                "scout-purple": "#490499"
+                "scout-purple": "#490499",
+                "network-blue": "#098fff"
             }
         }
     },
