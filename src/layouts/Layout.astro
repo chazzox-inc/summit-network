@@ -4,6 +4,10 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import "@fontsource-variable/work-sans";
+import "@fontsource/pathway-gothic-one";
+
 import "./main.scss";
 ---
 
@@ -15,7 +19,40 @@ import "./main.scss";
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
+
+        <!-- HTML Meta Tags -->
         <title>{title}</title>
+        <meta
+            name="description"
+            content="Network Scouts are part of the Scouting movement aimed at older members, typically aged 18-25. Network Scouts participate in a variety of activities, such as outdoor adventures, international Scouting events, and service projects. The program encourages members to develop life skills, build friendships, and contribute to society, while maintaining the core values of Scouting."
+        />
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://summitnetwork.org.uk/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Welcome to Summit Network " />
+        <meta
+            property="og:description"
+            content="Network Scouts are part of the Scouting movement aimed at older members, typically aged 18-25. Network Scouts participate in a variety of activities, such as outdoor adventures, international Scouting events, and service projects. The program encourages members to develop life skills, build friendships, and contribute to society, while maintaining the core values of Scouting."
+        />
+        <meta
+            property="og:image"
+            content="https://opengraph.b-cdn.net/production/images/219f488d-3e68-489b-a04d-1348d93d5023.jpg?token=9vrh3KSfJaA-zcgUOUg43D6kmFlp7dvFDeiPODPaPLk&height=900&width=1200&expires=33262641055"
+        />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="summitnetwork.org.uk" />
+        <meta property="twitter:url" content="https://summitnetwork.org.uk/" />
+        <meta name="twitter:title" content="Welcome to Summit Network " />
+        <meta
+            name="twitter:description"
+            content="Network Scouts are part of the Scouting movement aimed at older members, typically aged 18-25. Network Scouts participate in a variety of activities, such as outdoor adventures, international Scouting events, and service projects. The program encourages members to develop life skills, build friendships, and contribute to society, while maintaining the core values of Scouting."
+        />
+        <meta
+            name="twitter:image"
+            content="https://opengraph.b-cdn.net/production/images/219f488d-3e68-489b-a04d-1348d93d5023.jpg?token=9vrh3KSfJaA-zcgUOUg43D6kmFlp7dvFDeiPODPaPLk&height=900&width=1200&expires=33262641055"
+        />
     </head>
     <body class="min-h-screen min-w-[100vw] bg-[#f6f6e9]">
         <slot />

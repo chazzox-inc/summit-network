@@ -1,11 +1,40 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/navbar.astro";
-
 import { Image } from "astro:assets";
-import funny from "../assets/light-painting-funny.webp";
+
+import Layout from "layouts/Layout.astro";
+
+import Section from "components/section.tsx";
+import Collage from "components/collage.astro";
+
+import SummerCamp from "assets/summer-camp-site-2024.webp";
+import TomWine from "assets/tom-wine.webp";
 ---
 
-<Layout title="Welcome to Astro.">
-    <div class="flex h-screen flex-col"></div>
+<Layout title="Welcome to Summit Network!">
+    <Section className="h-nearly-screen static flex items-center justify-center">
+        <Image
+            src={SummerCamp}
+            class="h-nearly-screen absolute top-0 -z-0 object-cover object-bottom"
+            alt="Image of our summer camp 2024"
+        />
+        <div class="z-10 p-10 text-center text-white">
+            <h1 class="font-gothic text-6xl">Welcome to</h1>
+            <h1 class="neon-text text-7xl md:text-9xl">Summit Network</h1>
+        </div>
+    </Section>
+    <Section className="h-nearly-screen flex flex-col p-4 md:flex-row">
+        <Image src={TomWine} alt="Tom drinking wine" class="flex-1" />
+        <div class="flex flex-1 items-center justify-center">
+            <h3 class="text-center text-6xl font-bold">
+                POV: you just joined network
+            </h3>
+        </div>
+    </Section>
+    <Section>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <Collage />
+    </Section>
 </Layout>

@@ -20,6 +20,12 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.4(rollup@4.21.3)(sass@1.78.0)(typescript@5.6.2))(tailwindcss@3.4.11)
+      '@fontsource-variable/work-sans':
+        specifier: ^5.1.0
+        version: 5.1.0
+      '@fontsource/pathway-gothic-one':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@types/react':
         specifier: ^18.3.7
         version: 18.3.7
@@ -29,6 +35,9 @@ importers:
       astro:
         specifier: ^4.15.4
         version: 4.15.4(rollup@4.21.3)(sass@1.78.0)(typescript@5.6.2)
+      framer-motion:
+        specifier: ^11.5.4
+        version: 11.5.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -399,6 +408,12 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/work-sans@5.1.0':
+    resolution: {integrity: sha512-RBJh4FdqqMn6tHPRjBrhTDW6XZJsh9G4Udmxi6ZX09asGse2D/BkznPDycl4gaSNkqa1S54gCf7atX77YLtoKg==}
+
+  '@fontsource/pathway-gothic-one@5.1.0':
+    resolution: {integrity: sha512-5/zzaBMJi9T25utVF6vaGjIFVSbob46qyM/n5XMlWB9ZunXcQZ6/LtTI+RmcQcTjp5rzf8iJP48dNWL/BOAOpQ==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1110,6 +1125,20 @@ packages:
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
+
+  framer-motion@11.5.4:
+    resolution: {integrity: sha512-E+tb3/G6SO69POkdJT+3EpdMuhmtCh9EWuK4I1DnIC23L7tFPrl8vxP+LSovwaw6uUr73rUbpb4FgK011wbRJQ==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -2743,6 +2772,10 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@fontsource-variable/work-sans@5.1.0': {}
+
+  '@fontsource/pathway-gothic-one@5.1.0': {}
+
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -3510,6 +3543,13 @@ snapshots:
       signal-exit: 4.1.0
 
   fraction.js@4.3.7: {}
+
+  framer-motion@11.5.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      tslib: 2.7.0
+    optionalDependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   fsevents@2.3.3:
     optional: true
