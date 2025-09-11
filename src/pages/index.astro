@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 
 import Layout from "layouts/Layout.astro";
 
-
 import Collage from "components/collage.astro";
 
 import SummerCamp from "assets/summer-camp-site-2024.webp";
@@ -11,10 +10,10 @@ import TomWine from "assets/tom-wine.webp";
 ---
 
 <Layout title="Welcome to Summit Network!">
-    <div class="static flex h-nearly-screen items-center justify-center">
+    <div class="h-nearly-screen static flex items-center justify-center">
         <Image
             src={SummerCamp}
-            class="absolute top-0 -z-0 h-nearly-screen object-cover object-bottom"
+            class="h-nearly-screen absolute top-0 -z-0 object-cover object-bottom"
             alt="Image of our summer camp 2024"
         />
         <div class="z-10 p-10 text-center text-white">
@@ -25,7 +24,7 @@ import TomWine from "assets/tom-wine.webp";
             </a>
         </div>
     </div>
-    <div class="flex h-nearly-screen flex-col p-4 md:flex-row">
+    <div class="h-nearly-screen flex flex-col p-4 md:flex-row">
         <Image src={TomWine} alt="Tom drinking wine" class="flex-1" />
         <div class="flex flex-1 items-center justify-center">
             <h3 class="text-center text-6xl font-bold">

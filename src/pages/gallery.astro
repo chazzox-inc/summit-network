@@ -1,25 +1,30 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import Layout from "layouts/Layout.astro";
 import { shuffle } from "utils";
 
-const images = await Astro.glob<{ default: ImageMetadata }>(
-    "../assets/**/*.{webp,jpg,heic}"
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "../assets/**/*.{webp,jpg,heic}",
+    { eager: true }
 );
 ---
 
-
-<h3 class="text-center font-bold text-4xl my-4 mx-2">WE DO SOME REALLY COOL THINGS HEHE &#128526;</h3>
-<div class="flex w-full flex-wrap justify-center gap-4">
-    {
-        shuffle(images).map((file) => (
-            <Image
-                src={file.default}
-                width={75}
-                height={75}
-                loading="lazy"
-                alt="Gallery Image"
-            />
-        ))
-    }
-</div>
+<Layout title="Gallery">
+    <h3 class="mx-2 my-4 text-center text-4xl font-bold">
+        WE DO SOME REALLY COOL THINGS HEHE &#128526;
+    </h3>
+    <div class="flex w-full flex-wrap justify-center gap-4">
+        {
+            shuffle(Object.values(images)).map((file) => (
+                <Image
+                    src={file.default}
+                    width={75}
+                    height={75}
+                    loading="lazy"
+                    alt="Gallery Image"
+                />
+            ))
+        }
+    </div>
+</Layout>

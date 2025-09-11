@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --color-scout-purple: #490499;
+    --color-network-blue: #098fff;
+}
+
+@utility h-nearly-screen {
+    height: 95vh;
+}
+
+@utility font-gothic {
+    font-family: "Pathway Gothic One", sans-serif;
+}
 
 @layer components {
     .neon-text {
