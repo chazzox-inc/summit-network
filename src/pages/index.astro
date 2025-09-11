@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 
 import Layout from "layouts/Layout.astro";
 
-import Section from "components/section.tsx";
+
 import Collage from "components/collage.astro";
 
 import SummerCamp from "assets/summer-camp-site-2024.webp";
@@ -11,7 +11,7 @@ import TomWine from "assets/tom-wine.webp";
 ---
 
 <Layout title="Welcome to Summit Network!">
-    <Section className="static flex h-nearly-screen items-center justify-center">
+    <div class="static flex h-nearly-screen items-center justify-center">
         <Image
             src={SummerCamp}
             class="absolute top-0 -z-0 h-nearly-screen object-cover object-bottom"
@@ -24,20 +24,20 @@ import TomWine from "assets/tom-wine.webp";
                 >view our stuff 👀
             </a>
         </div>
-    </Section>
-    <Section className="flex h-nearly-screen flex-col p-4 md:flex-row">
+    </div>
+    <div class="flex h-nearly-screen flex-col p-4 md:flex-row">
         <Image src={TomWine} alt="Tom drinking wine" class="flex-1" />
         <div class="flex flex-1 items-center justify-center">
             <h3 class="text-center text-6xl font-bold">
                 POV: you just joined network
             </h3>
         </div>
-    </Section>
-    <Section>
+    </div>
+    <div>
         <div>
             <p></p>
             <p></p>
         </div>
         <Collage />
-    </Section>
+    </div>
 </Layout>
