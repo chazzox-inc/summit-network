@@ -12,13 +12,13 @@ const Overlay: FC<
         <>
             {activeImageIndex && (
                 <div
-                    className="fixed mx-auto h-screen w-full p-10"
+                    className="fixed top-0 mx-auto flex h-screen w-full items-center p-10"
                     onClick={() => setActiveImageIndex(undefined)}
                 >
                     {
                         <img
                             src={images[activeImageIndex].srcSet.values[1].url}
-                            className="w-1/2"
+                            className="h-nearly-screen object-contain"
                             alt=""
                         />
                     }
